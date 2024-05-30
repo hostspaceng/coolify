@@ -165,7 +165,6 @@ class RunRemoteProcess
     public function encodeOutput($type, $output)
     {
         $outputStack = json_decode($this->activity->description, associative: true, flags: JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE);
-
         $outputStack[] = [
             'type' => $type,
             'output' => $output,

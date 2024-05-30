@@ -57,6 +57,7 @@ function force_start_deployment(ApplicationDeploymentQueue $deployment)
     $deployment->update([
         'status' => ApplicationDeploymentStatus::IN_PROGRESS->value,
     ]);
+
     dispatch(new ApplicationDeploymentJob(
         application_deployment_queue_id: $deployment->id,
     ));
@@ -69,6 +70,7 @@ function queue_next_deployment(Application $application)
         $next_found->update([
             'status' => ApplicationDeploymentStatus::IN_PROGRESS->value,
         ]);
+
         dispatch(new ApplicationDeploymentJob(
             application_deployment_queue_id: $next_found->id,
         ));
