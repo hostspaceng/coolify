@@ -2,7 +2,7 @@
     x-init="$wire.checkUpdate" x-data="upgradeModal">
     @if ($isUpgradeAvailable)
         <div :class="{ 'z-40': modalOpen }" class="relative w-auto h-auto">
-            <button class="menu-item" @click="modalOpen=true">
+            <!-- <button class="menu-item" @click="modalOpen=true">
                 @if ($showProgress)
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="w-6 h-6 text-pink-500 transition-colors hover:text-pink-300 lds-heart" viewBox="0 0 24 24"
@@ -25,7 +25,7 @@
                     </svg>
                     Upgrade
                 @endif
-            </button>
+            </button> -->
 
             <template x-teleport="body">
                 <div x-show="modalOpen"
