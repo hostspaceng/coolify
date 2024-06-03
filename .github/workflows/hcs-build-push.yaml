@@ -63,6 +63,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             sudo su -
+            whoami
 
             echo "Stopping Running Coolify Containers......."
             sudo docker stop -t 0 coolify coolify-realtime coolify-db coolify-redis coolify-proxy
