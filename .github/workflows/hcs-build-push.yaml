@@ -2,7 +2,7 @@ name: Build & Push customized Coolify
 
 on:
   push:
-    branches: ["main", "build-push"]
+    branches: ["cicd"]
   workflow_dispatch:
 
 jobs:
