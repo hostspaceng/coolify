@@ -61,5 +61,5 @@ jobs:
           host: ${{ secrets.IP_ADDRESS }}
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
-          script: whoami
+          script: sudo docker ps
         
