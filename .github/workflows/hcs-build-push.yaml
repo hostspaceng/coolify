@@ -3,6 +3,7 @@ name: Build & Push customized Coolify
 on:
   push:
     branches: ["main", "build-push"]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -44,3 +45,21 @@ jobs:
             --tag gcr.io/my-bitnami-hosting/coolify:latest \
             --tag gcr.io/my-bitnami-hosting/coolify:${{ github.sha }} \
             --file docker/prod/Dockerfile .
+  
+  deploy:
+    name: Deploy to Coolify Instance
+    runs-on: ubuntu-latest
+
+    steps: 
+
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Stop Running Coolify Instance
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.IP_ADDRESS }}
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: whoami
+        
