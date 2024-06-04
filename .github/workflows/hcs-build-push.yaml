@@ -80,6 +80,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.IP_ADDRESS }}
+          key: ${{ secrets.SSH_KEY }}
           username: root
           source: "docker-compose.prod.yml"
           target: /data/coolify/source
