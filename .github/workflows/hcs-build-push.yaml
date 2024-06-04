@@ -55,26 +55,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      # - name: Stop Running Coolify and Delete
-      #   uses: appleboy/ssh-action@v1.0.3
-      #   with:
-      #     host: ${{ secrets.IP_ADDRESS }}
-      #     username: root
-      #     key: ${{ secrets.SSH_KEY }}
-      #     script: |
-      #       sudo -s
+      - name: Stop Running Coolify and Delete
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.IP_ADDRESS }}
+          username: root
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo -s
 
-      #       echo "Stopping Running Coolify Containers......."
-      #       sudo docker stop -t 0 coolify coolify-realtime coolify-db coolify-redis coolify-proxy
+            echo "Stopping Running Coolify Containers......."
+            sudo docker stop -t 0 coolify coolify-realtime coolify-db coolify-redis coolify-proxy
 
-      #       echo "Removing coolify cointainers....."
-      #       sudo docker rm coolify coolify-realtime coolify-db coolify-redis coolify-proxy
+            echo "Removing coolify cointainers....."
+            sudo docker rm coolify coolify-realtime coolify-db coolify-redis coolify-proxy
 
-      #       echo "Remove Coolify Redis and database"
-      #       sudo docker volume rm coolify-db coolify-redis
+            echo "Remove Coolify Redis and database"
+            sudo docker volume rm coolify-db coolify-redis
 
-      #       echo "Removing coolify docker network"
-      #       sudo docker network rm coolify
+            echo "Removing coolify docker network"
+            sudo docker network rm coolify
 
       - name: Copy Coolify Docker Image
         uses: appleboy/scp-action@v0.1.7
