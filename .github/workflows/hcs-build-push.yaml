@@ -82,7 +82,7 @@ jobs:
           IP_ADDRESS: ${{ secrets.IP_ADDRESS }}
         run: |
           echo $SSH_KEY >> key.pem
-          chmod 400 key.pem
+          chmod 600 key.pem
           scp -oStrictHostKeyChecking=no -i key.pem docker-compose.prod.yml root@$IP_ADDRESS:/data/coolify/source
 
       - name: Deploy New coolify Version
