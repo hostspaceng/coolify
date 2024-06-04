@@ -77,13 +77,12 @@ jobs:
       #       sudo docker network rm coolify
 
       - name: Copy Coolify Docker Image
-        env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          IP_ADDRESS: ${{ secrets.IP_ADDRESS }}
-        run: |
-          echo $SSH_KEY >> key.pem
-          chmod 600 key.pem
-          scp -oStrictHostKeyChecking=no -i key.pem docker-compose.prod.yml root@$IP_ADDRESS:/data/coolify/source
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.IP_ADDRESS }}
+          username: root
+          source: "docker-compose.prod.yml"
+          target: /data/coolify/source
 
       - name: Deploy New coolify Version
         uses: appleboy/ssh-action@v1.0.3
