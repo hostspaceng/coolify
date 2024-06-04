@@ -1,6 +1,6 @@
 services:
   coolify:
-    image: "ghcr.io/coollabsio/coolify:${LATEST_IMAGE:-latest}"
+    image: "gcr.io/my-bitnami-hosting/coolify:latest"
     volumes:
       - type: bind
         source: /data/coolify/source/.env
