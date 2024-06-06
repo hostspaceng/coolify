@@ -80,7 +80,7 @@
                                 &
                             @endif
                             @if (!$server->settings->is_usable)
-                                Not usable by Coolify
+                                Not usable by HCS
                             @endif
                         </div>
                     </div>

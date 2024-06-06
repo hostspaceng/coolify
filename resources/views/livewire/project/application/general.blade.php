@@ -202,13 +202,13 @@
                         </div>
                     @endif
                     <x-forms.input
-                        helper="You can add custom docker run options that will be used when your container is started.<br>Note: Not all options are supported, as they could mess up Coolify's automation and could cause bad experience for users.<br><br>Check the <a class='underline dark:text-white' href='https://coolify.io/docs/knowledge-base/docker/custom-commands'>docs.</a>"
+                        helper="You can add custom docker run options that will be used when your container is started.<br>Note: Not all options are supported, as they could mess up HCS's automation and could cause bad experience for users.<br><br>Check the <a class='underline dark:text-white' href='https://coolify.io/docs/knowledge-base/docker/custom-commands'>docs.</a>"
                         placeholder="--cap-add SYS_ADMIN --device=/dev/fuse --security-opt apparmor:unconfined --ulimit nofile=1024:1024 --tmpfs /run:rw,noexec,nosuid,size=65536k"
                         id="application.custom_docker_run_options" label="Custom Docker Options" />
                 @endif
             @else
                 <x-forms.input
-                    helper="You can add custom docker run options that will be used when your container is started.<br>Note: Not all options are supported, as they could mess up Coolify's automation and could cause bad experience for users.<br><br>Check the <a class='underline dark:text-white' href='https://coolify.io/docs/knowledge-base/docker/custom-commands'>docs.</a>"
+                    helper="You can add custom docker run options that will be used when your container is started.<br>Note: Not all options are supported, as they could mess up HCS's automation and could cause bad experience for users.<br><br>Check the <a class='underline dark:text-white' href='https://coolify.io/docs/knowledge-base/docker/custom-commands'>docs.</a>"
                     placeholder="--cap-add SYS_ADMIN --device=/dev/fuse --security-opt apparmor:unconfined --ulimit nofile=1024:1024 --tmpfs /run:rw,noexec,nosuid,size=65536k"
                     id="application.custom_docker_run_options" label="Custom Docker Options" />
             @endif
@@ -257,8 +257,8 @@
                         id="application.settings.is_container_label_escape_enabled" instantSave></x-forms.checkbox>
                 </div>
                 <x-modal-confirmation buttonFullWidth action="resetDefaultLabels"
-                    buttonTitle="Reset to Coolify Generated Labels">
-                    Are you sure you want to reset the labels to Coolify generated labels? <br>It could break the proxy
+                    buttonTitle="Reset to HCS Generated Labels">
+                    Are you sure you want to reset the labels to HCS generated labels? <br>It could break the proxy
                     configuration after you restart the container.
                 </x-modal-confirmation>
 

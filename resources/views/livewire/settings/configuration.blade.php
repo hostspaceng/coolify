@@ -6,7 +6,7 @@
                 Save
             </x-forms.button>
         </div>
-        <div>General configuration for your Coolify instance.</div>
+        <div>General configuration for your HCS instance.</div>
 
         <div class="flex flex-col gap-2 pt-4">
             <div class="flex flex-wrap items-end gap-2">
@@ -28,15 +28,15 @@
     <h2 class="pt-6">Advanced</h2>
     <div class="text-right md:w-96">
         @if (!is_null(env('AUTOUPDATE', null)))
-            <x-forms.checkbox instantSave helper="AUTOUPDATE is set in .env file, you need to modify it there." disabled
-                id="is_auto_update_enabled" label="Auto Update Coolify" />
+            <x-forms.checkbox disabled instantSave helper="AUTOUPDATE is set in .env file, you need to modify it there." disabled
+                id="is_auto_update_enabled" label="Auto Update HCS" />
         @else
-            <x-forms.checkbox instantSave id="is_auto_update_enabled" label="Auto Update Coolify" />
+            <x-forms.checkbox disabled instantSave id="is_auto_update_enabled" label="Auto Update HCS" />
         @endif
-        <x-forms.checkbox instantSave id="is_registration_enabled" label="Registration Allowed" />
-        <x-forms.checkbox instantSave id="do_not_track" label="Do Not Track" />
+        <x-forms.checkbox disabled instantSave id="is_registration_enabled" label="Registration Allowed" />
+        <x-forms.checkbox disabled instantSave id="do_not_track" label="Do Not Track" />
         {{-- @if ($next_channel)
-            <x-forms.checkbox instantSave helper="Not recommended. Only if you like to live on the edge."
+            <x-forms.checkbox disabled instantSave helper="Not recommended. Only if you like to live on the edge."
                 id="next_channel" label="Enable pre-release (early) updates" />
         @else
             <x-forms.checkbox disabled instantSave

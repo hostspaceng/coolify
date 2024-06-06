@@ -325,7 +325,7 @@
                             </li>
                         @endpersist
                     @endif
-                    <li>
+                    <!-- <li>
                         <a title="Onboarding"
                             class="{{ request()->is('onboarding*') ? 'menu-item-active menu-item' : 'menu-item' }}"
                             href="{{ route('onboarding') }}">
@@ -335,7 +335,7 @@
                             </svg>
                             Onboarding
                         </a>
-                    </li>
+                    </li> -->
                     <!-- <li>
                         <a title="Sponsor us" class="menu-item" href="https://coolify.io/sponsorships"
                             target="_blank">

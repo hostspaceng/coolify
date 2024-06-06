@@ -24,7 +24,7 @@
             @if ($application->build_pack === 'dockercompose')
                 <x-forms.checkbox instantSave id="application.settings.is_raw_compose_deployment_enabled"
                     label="Raw Compose Deployment"
-                    helper="WARNING: Advanced use cases only. Your docker compose file will be deployed as-is. Nothing is modified by Coolify. You need to configure the proxy parts. More info in the <a class='underline dark:text-white' href='https://coolify.io/docs/knowledge-base/docker/compose#raw-docker-compose-deployment'>documentation.</a>" />
+                    helper="WARNING: Advanced use cases only. Your docker compose file will be deployed as-is. Nothing is modified by HCS. You need to configure the proxy parts. More info in the <a class='underline dark:text-white' href='https://coolify.io/docs/knowledge-base/docker/compose#raw-docker-compose-deployment'>documentation.</a>" />
             @endif
             <h3>Container Names</h3>
             <x-forms.checkbox
@@ -41,7 +41,7 @@
                 <h3>Network</h3>
                 <x-forms.checkbox instantSave id="application.settings.connect_to_docker_network"
                     label="Connect To Predefined Network"
-                    helper="By default, you do not reach the Coolify defined networks.<br>Starting a docker compose based resource will have an internal network. <br>If you connect to a Coolify defined network, you maybe need to use different internal DNS names to connect to a resource.<br><br>For more information, check <a class='underline dark:text-white' target='_blank' href='https://coolify.io/docs/knowledge-base/docker/compose#connect-to-predefined-networks'>this</a>." />
+                    helper="By default, you do not reach the HCS defined networks.<br>Starting a docker compose based resource will have an internal network. <br>If you connect to a HCS defined network, you maybe need to use different internal DNS names to connect to a resource.<br><br>For more information, check <a class='underline dark:text-white' target='_blank' href='https://coolify.io/docs/knowledge-base/docker/compose#connect-to-predefined-networks'>this</a>." />
             @endif
             @if (!$application->settings->is_raw_compose_deployment_enabled)
                 <h3>Logs</h3>

@@ -526,7 +526,7 @@
                                     {{ data_get($service, 'documentation') }}
                                 </x-slot>
                                 <x-slot:upgrade>
-                                    You need to upgrade Coolify to {{ data_get($service, 'minversion') }} to use this
+                                    You need to upgrade HCS to {{ data_get($service, 'minversion') }} to use this
                                     service.
                                 </x-slot>
                             </x-resource-view>

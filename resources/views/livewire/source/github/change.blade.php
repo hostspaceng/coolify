@@ -47,7 +47,7 @@
                     @if (!isCloud())
                         <div class="w-48">
                             <x-forms.checkbox label="System Wide?"
-                                helper="If checked, this GitHub App will be available for everyone in this Coolify instance."
+                                helper="If checked, this GitHub App will be available for everyone in this HCS instance."
                                 instantSave id="github_app.is_system_wide" />
                         </div>
                     @endif

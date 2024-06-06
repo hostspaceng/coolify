@@ -3,7 +3,7 @@
     <div
         class="flex flex-col items-center justify-center p-10 mx-2 mt-10 bg-white border rounded-lg shadow lg:p-20 dark:bg-transparent dark:border-none max-w-7xl ">
         @if ($currentState === 'welcome')
-            <h1 class="text-3xl font-bold lg:text-5xl">Welcome to Coolify</h1>
+            <h1 class="text-3xl font-bold lg:text-5xl">Welcome to HCS</h1>
             <div class="py-6 text-center lg:text-xl">Let me help you set up the basics.</div>
             <div class="flex justify-center ">
                 <x-forms.button class="justify-center w-64 box-boarding"
@@ -12,9 +12,9 @@
                 </x-forms.button>
             </div>
         @elseif ($currentState === 'explanation')
-            <x-boarding-step title="What is Coolify?">
+            <x-boarding-step title="What is HCS?">
                 <x-slot:question>
-                    Coolify is an all-in-one application to automate tasks on your servers, deploy application with
+                    HCS is an all-in-one application to automate tasks on your servers, deploy application with
                     Git
                     integrations, deploy databases and services, monitor these resources with notifications and
                     alerts
@@ -26,10 +26,10 @@
                 </x-slot:question>
                 <x-slot:explanation>
                     <p><x-highlighted text="Task automation:" /> You don't need to manage your servers anymore.
-                        Coolify does
+                        HCS does
                         it for you.</p>
                     <p><x-highlighted text="No vendor lock-in:" /> All configurations are stored on your servers, so
-                        everything works without a connection to Coolify (except integrations and automations).</p>
+                        everything works without a connection to HCS (except integrations and automations).</p>
                     <p><x-highlighted text="Monitoring:" />You can get notified on your favourite platforms
                         (Discord,
                         Telegram, Email, etc.) when something goes wrong, or an action is needed from your side.</p>
@@ -57,7 +57,7 @@
                         Localhost is not reachable with the following public key.
                         <br /> <br />
                         Please make sure you have the correct public key in your ~/.ssh/authorized_keys file for
-                        user or skip the boarding process and add a new private key manually to Coolify and to the
+                        user or skip the boarding process and add a new private key manually to HCS and to the
                         server.
                         <br />
                         Check this <a target="_blank" class="underline"
@@ -73,7 +73,7 @@
                     <p>Servers are the main building blocks, as they will host your applications, databases,
                         services, called resources. Any CPU intensive process will use the server's CPU where you
                         are deploying your resources.</p>
-                    <p><x-highlighted text="Localhost" /> is the server where Coolify is running on. It is not
+                    <p><x-highlighted text="Localhost" /> is the server where HCS is running on. It is not
                         recommended to use one server
                         for everything.</p>
                     <p><x-highlighted text="A remote server" /> is a server reachable through SSH. It can be hosted
@@ -107,7 +107,7 @@
                 </x-slot:actions>
                 <x-slot:explanation>
                     <p>SSH Keys are used to connect to a remote server through a secure shell, called SSH.</p>
-                    <p>You can use your own ssh private key, or you can let Coolify to create one for you.</p>
+                    <p>You can use your own ssh private key, or you can let HCS to create one for you.</p>
                     <p>In both ways, you need to add the public version of your ssh private key to the remote
                         server's
                         <code class="dark:text-warning">~/.ssh/authorized_keys</code> file.
@@ -145,7 +145,7 @@
                         This server is not reachable with the following public key.
                         <br /> <br />
                         Please make sure you have the correct public key in your ~/.ssh/authorized_keys file for
-                        user or skip the boarding process and add a new private key manually to Coolify and to the
+                        user or skip the boarding process and add a new private key manually to HCS and to the
                         server.
                         <br />
                         Check this <a target="_blank" class="underline"
@@ -160,7 +160,7 @@
                 </x-slot:actions>
                 <x-slot:explanation>
                     <p>Private Keys are used to connect to a remote server through a secure shell, called SSH.</p>
-                    <p>You can use your own private key, or you can let Coolify to create one for you.</p>
+                    <p>You can use your own private key, or you can let HCS to create one for you.</p>
                     <p>In both ways, you need to add the public version of your private key to the remote server's
                         <code>~/.ssh/authorized_keys</code> file.
                     </p>
@@ -191,7 +191,7 @@
                 </x-slot:actions>
                 <x-slot:explanation>
                     <p>Private Keys are used to connect to a remote server through a secure shell, called SSH.</p>
-                    <p>You can use your own private key, or you can let Coolify to create one for you.</p>
+                    <p>You can use your own private key, or you can let HCS to create one for you.</p>
                     <p>In both ways, you need to add the public version of your private key to the remote server's
                         <code>~/.ssh/authorized_keys</code> file.
                     </p>
@@ -225,7 +225,7 @@
                         </div>
                         <div class="lg:w-64">
                             <x-forms.checkbox
-                                helper="If you are using Cloudflare Tunnels, enable this. It will proxy all ssh requests to your server through Cloudflare.<br><span class='dark:text-warning'>Coolify does not install/setup Cloudflare (cloudflared) on your server.</span>"
+                                helper="If you are using Cloudflare Tunnels, enable this. It will proxy all ssh requests to your server through Cloudflare.<br><span class='dark:text-warning'>HCS does not install/setup Cloudflare (cloudflared) on your server.</span>"
                                 id="isCloudflareTunnel" label="Cloudflare Tunnel" />
                         </div>
                         <x-forms.button type="submit">Continue</x-forms.button>

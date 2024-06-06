@@ -80,7 +80,7 @@ class ProductionSeeder extends Seeder
                     ],
                     [
                         'name' => 'localhost\'s key',
-                        'description' => 'The private key for the Coolify host machine (localhost).', 'private_key' => $coolify_key
+                        'description' => 'The private key for the HCS host machine (localhost).', 'private_key' => $coolify_key
                     ]
                 );
             } else {
@@ -94,7 +94,7 @@ class ProductionSeeder extends Seeder
                 $server_details = [
                     'id' => 0,
                     'name' => "localhost",
-                    'description' => "This is the server where Coolify is running on. Don't delete this!",
+                    'description' => "This is the server where HCS is running on. Don't delete this!",
                     'user' => 'root',
                     'ip' => "host.docker.internal",
                     'team_id' => 0,

@@ -14,11 +14,11 @@
                     <div class="px-2 pt-4">
                         <div class="flex flex-col pb-4">
                             <div>Preselect branch (eg: main):</div>
-                            <div class='text-helper'>https://github.com/coollabsio/coolify-examples/tree/main</div>
+                            <div class='text-helper'>https://github.com/hostspaceng/hcs-examples/tree/main</div>
                         </div>
                         <div>
                             For example application deployments, checkout <a class="underline dark:text-white"
-                                href="https://github.com/coollabsio/coolify-examples/" target="_blank">Coolify
+                                href="https://github.com/hostspaceng/hcs-examples/" target="_blank">HCS
                                 Examples</a>.
                         </div>
                 @endif
