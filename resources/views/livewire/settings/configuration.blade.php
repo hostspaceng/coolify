@@ -33,7 +33,7 @@
         @else
             <x-forms.checkbox disabled instantSave id="is_auto_update_enabled" label="Auto Update HCS" />
         @endif
-        <x-forms.checkbox disabled instantSave id="is_registration_enabled" label="Registration Allowed" />
+        <x-forms.checkbox instantSave id="is_registration_enabled" label="Registration Allowed" />
         <x-forms.checkbox disabled instantSave id="do_not_track" label="Do Not Track" />
         {{-- @if ($next_channel)
             <x-forms.checkbox disabled instantSave helper="Not recommended. Only if you like to live on the edge."
