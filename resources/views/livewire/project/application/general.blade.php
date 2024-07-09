@@ -2,9 +2,21 @@
     <form wire:submit='submit' class="flex flex-col pb-32">
         <div class="flex items-center gap-2">
             <h2>General</h2>
-            <x-forms.button type="submit">
+            <x-forms.button 
+                type="submit" 
+                style="background-color: #ff5733; 
+                    color: white; 
+                    border: 2px solid #c70039; 
+                    padding: 15px 30px; 
+                    border-radius: 8px; 
+                    font-size: 16px; 
+                    font-weight: bold; 
+                    cursor: pointer; 
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+                    transition: background-color 0.3s, transform 0.3s;">
                 Save
             </x-forms.button>
+
         </div>
         <div>General configuration for your application.</div>
         <div class="flex flex-col gap-2 py-4">
