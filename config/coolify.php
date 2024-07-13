@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'docs' => 'https://coolify.io/docs/',
-    'contact' => 'https://coolify.io/docs/contact',
+    'docs' => 'https://hostspace-cloud.gitbook.io/hcs/~/changes/1x9jWFdRIT8zYXZUIw4x/hcs-user-guide/deploying-apps-on-hcs',
+    'contact' => 'https://hostspacecloud.com', // to replace with helpy or whichever support platform we use
     'feedback_discord_webhook' => env('FEEDBACK_DISCORD_WEBHOOK'),
     'self_hosted' => env('SELF_HOSTED', true),
     'waitlist' => env('WAITLIST', false),
