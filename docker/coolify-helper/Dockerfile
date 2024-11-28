@@ -51,5 +51,7 @@ RUN if [[ ${TARGETPLATFORM} == 'linux/arm64' ]]; then \
 COPY --from=minio-client /usr/bin/mc /usr/bin/mc
 RUN chmod +x /usr/bin/mc
 
+ENV COOLIFY_LOG_LEVEL=debug
+
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["tail", "-f", "/dev/null"]
